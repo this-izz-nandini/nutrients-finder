@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Nutrient Finder</h1>
+        <form method="POST">
+            <label for="ingredient">Enter ingredient:</label>
+            <input type="text" id="ingredient" name="ingredient" placeholder="e.g., 5 Apples" required>
+            <button type="submit">Get Nutrition Data</button>
+        </form>
+    </div>
+</body>
+</html>

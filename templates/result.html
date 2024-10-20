@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrient Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Nutrient Data for {{ ingredient }}</h1>
+    <div style="display: flex;">
+        <!-- Table with top 15 nutrients -->
+        <div style="flex: 1;">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nutrient</th>
+                        <th>Quantity</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for nutrient, details in top_nutrients %}
+                    <tr>
+                        <td>{{ details['label'] }}</td>
+                        <td>{{ details['quantity'] }}</td>
+                        <td>{{ details['unit'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- Pie chart for top 6 nutrients -->
+       <div class="pie-chart-container">
+    <img src="{{ url_for('pie_chart') }}" alt="Nutrient Pie Chart" class="pie-chart">
+</div>
+    </div>
+    <br>
+    <a href="/">Go Back</a>
+</body>
+</html>
