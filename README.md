@@ -62,10 +62,13 @@ Open the browser and navigate to http://127.0.0.1:5000/ to start using the Nutri
 
 Running the application using Docker, following the steps below:
 
-1. Building the Docker image:
+1. Pulling the Docker image:
 ```
    docker pull nandiiniij/nutrients-api
 ```
+
+**NOTE** - For *building a docker image* from the git repo, use:
+``` docker build -t <image-name> . ```
 
 2. Running the Docker container:
 ```
