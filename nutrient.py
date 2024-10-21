@@ -65,4 +65,4 @@ def pie_chart():
     
     return send_file(img, mimetype='image/png')
 
-app.run(debug=True)
+app.run(debug=True, host='0.0.0.0', port=5000)
